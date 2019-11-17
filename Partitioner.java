@@ -1,3 +1,7 @@
+/*
+This method accepts a List object and number of slots to divide the list into. The return is a List of Lists i.e List<List<T>>
+that contains the chunks. Note that the extra elements are always returned on the last list added to List<List<T>>
+*/
 
 private <T> List<List<T>> partitioner(List<T> list, int slots) throws Exception {
 
