@@ -1,5 +1,3 @@
-package com.fico.pricing.writer;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -27,13 +25,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
-import com.fico.pricing.configuration.IPricingConst;
-import com.fico.pricing.configuration.ProductProfileProperties;
-import com.fico.pricing.configuration.TransactionAttributePair;
-import com.fico.pricing.db.PricingGridDB;
-import com.fico.pricing.reader.FileNamePatternBean;
-import com.fico.pricing.reader.PGException;
-import com.fico.pricing.util.ProductProfileUtils;
+/*
+This class is a Spring batch writer that works to perform transactional DB inserts/updates across data centers in a transactional manner.
+The insertIntoDB method is significant in this regard and uses Spring's PlatformTransactionManager for transaction management.
+*/
 
 @Transactional(propagation = Propagation.NOT_SUPPORTED)
 public class PricingGridWriter implements StepExecutionListener, ItemWriter<Map<String, ?>> {
