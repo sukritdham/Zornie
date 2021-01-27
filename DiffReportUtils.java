@@ -1,5 +1,3 @@
-package com.fico.pricing.util;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,14 +19,16 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
 
-import com.fico.pricing.configuration.IPricingConst;
-//import com.fico.pricing.domain.pricingdb.DA.BaseRate;
+import com.dham.pricing.configuration.IPricingConst;
+//import com.dham.pricing.domain.pricingdb.DA.BaseRate;
 import com.google.common.collect.MapDifference;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+/*
+This class contains methods to create a diff report(excel) from comparing two csv files, the columns should be passed in as a List<Map>'s
+*/
 
-@Component
 public class DiffReportUtils {
 	
 	private final static Logger logger = LoggerFactory.getLogger(DiffReportUtils.class);		
