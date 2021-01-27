@@ -31,7 +31,7 @@ The insertIntoDB method is significant in this regard and uses Spring's Platform
 */
 
 @Transactional(propagation = Propagation.NOT_SUPPORTED)
-public class PricingGridWriter implements StepExecutionListener, ItemWriter<Map<String, ?>> {
+public class GridWriter implements StepExecutionListener, ItemWriter<Map<String, ?>> {
 
 	private final static Logger logger = LoggerFactory.getLogger(PricingGridWriter.class);
 
